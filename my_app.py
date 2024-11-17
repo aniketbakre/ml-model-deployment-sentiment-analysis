@@ -75,7 +75,7 @@ analyze_button = col1.button("Analyze Sentiment")
 clear_button = col2.button("Clear")
 
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
-classifier = pipeline('text-classification', model='mlops-tinybert-sentimentanalysis/ml_model', device=device)
+classifier = pipeline('text-classification', model='ml-model-deployment-sentiment-analysis/ml_model', device=device)
 output = classifier(user_text)
 
 
